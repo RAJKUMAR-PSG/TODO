@@ -4,6 +4,8 @@ import com.example.todo.model.Todo;
 import com.example.todo.repo.TodoRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TodoService {
     private final TodoRepository todoRepository;
@@ -14,6 +16,14 @@ public class TodoService {
 
     public Todo saveTodo(Todo todo){
         todoRepository.save(todo);
+        return todo;
+    }
+    public List<Todo> getAllTodo(){
+        List<Todo> allTodos = todoRepository.getAllTodo();
+        return allTodos;
+    }
+    public Todo getOneTodoWithId(int id){
+        Todo todo = todoRepository.getOneTodoWithId(id);
         return todo;
     }
 }
