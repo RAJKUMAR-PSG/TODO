@@ -31,4 +31,9 @@ public class TodoController {
         return todoService.getOneTodoWithId(id);
     }
 
+    @PatchMapping("/{id}")
+    public Todo updateTodo(@PathVariable int id, @RequestBody Todo todo){
+        return todoService.updateTodoFields(id, todo);
+    }
+
 }

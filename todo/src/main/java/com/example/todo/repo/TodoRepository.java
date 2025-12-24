@@ -39,4 +39,10 @@ public class TodoRepository {
             return todo;
         }, id);
     }
+
+    public Todo updateTodoFields(int id, Todo todo){
+        String sql = "update todos set title = ? where id = ?";
+        jdbcTemplate.update(sql, todo.getTitle(), id);
+        return todo;
+    }
 }

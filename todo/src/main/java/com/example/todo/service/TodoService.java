@@ -26,4 +26,8 @@ public class TodoService {
         Todo todo = todoRepository.getOneTodoWithId(id);
         return todo;
     }
+    public Todo updateTodoFields(int id, Todo todo){
+        Todo updatedTodo = todoRepository.updateTodoFields(id, todo);
+        return updatedTodo;
+    }
 }
