@@ -30,4 +30,7 @@ public class TodoService {
         Todo updatedTodo = todoRepository.updateTodoFields(id, todo);
         return updatedTodo;
     }
+    public void deleteMapping(int id){
+        todoRepository.deleteMapping(id);
+    }
 }

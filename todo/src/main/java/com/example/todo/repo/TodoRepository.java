@@ -45,4 +45,9 @@ public class TodoRepository {
         jdbcTemplate.update(sql, todo.getTitle(), id);
         return todo;
     }
+
+    public void deleteMapping(int id){
+        String sql = "delete from todos where id = ?";
+        jdbcTemplate.update(sql, id);
+    }
 }
